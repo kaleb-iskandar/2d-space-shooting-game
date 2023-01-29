@@ -92,12 +92,12 @@ public class GameManager : MonoBehaviour
 
         mainMenuPanel.gameObject.SetActive(false);
         gameStatPanel.gameObject.SetActive(true);
-        gameManagerAudioSource.PlayOneShot(buttonClickSound);
-        Invoke(nameof(RespawnPlayer), respawnTime);
+        gameManagerAudioSource.PlayOneShot(instance.buttonClickSound);
+        Invoke(nameof(RespawnPlayer), 0f);
     }
     public void ExitGame()
     {
-        gameManagerAudioSource.PlayOneShot(buttonClickSound);
+        gameManagerAudioSource.PlayOneShot(instance.buttonClickSound);
         Application.Quit();
     }
     private void Update()
